@@ -1,0 +1,32 @@
+---
+layout: default
+title:  "How to fix ADS129x RLD output being stuck at AVDD"
+date:   2020-06-16 10:05:44 +0200
+categories: ads1292 rld issue
+excerpt_separator: <!--more-->
+---
+
+I wanted to use my ADS1291's Right Leg Drive amplifier to output the internal midsupply. I've spent several hours trying to figure out why it was stuck at AVDD. *Spoiler alert*: my configuration was incorrect.
+
+<!--more-->
+
+This post was written and tested using and ADS1291, but in principle it is relevant for all the
+1/2 channel ADS1x9x devices:
+ - ADS1191
+ - ADS1192
+ - ADS1291
+ - ADS1292
+ - ADS1292R
+
+If you are using an ADS1x9x device and your RLD output voltage is stuck to AVDD, try reviewing
+the register values you are configuring.
+
+I've stumbled upon [this](https://e2e.ti.com/support/data-converters/f/73/t/214786) post while debugging this issue. While unhelpful for me, it showed that some people were indeed having the same issue as I. And in [this comment](https://e2e.ti.com/support/data-converters/f/73/p/214786/782850#782850) we can see the cause of the issue:
+
+ > ;ADS129x_RESP1 , #000000000B         ; data: resp off (default))
+
+The default value of the `RESP1` register should be `0x02`, or `00000010b`. In the datasheet `bit 1` is "Must be set to '1'".
+
+After fixing this, the Right Leg Drive output changed to the expected value.
+
+Lessons learnt: *triple check the register default values.*
