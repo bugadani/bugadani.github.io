@@ -41,7 +41,7 @@ let text_style = TextStyleBuilder::new(Font6x8)
 
 Text::new("Hello, world!", Point::zero())
      .into_styled(text_style)
-     .align_to(display_area, horizontal::Center, vertical::Center)
+     .align_to(display_area, horizontal::Center, vertical::Center) // this is where the magic happens
      .draw(&mut disp)
      .unwrap();
 ```
