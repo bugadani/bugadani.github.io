@@ -25,10 +25,12 @@ embedded-text = "0.0.1"
 
 There are still quite a lot to do before `embedded-text` could be considered stable.
 
+For documentation, see [docs.rs]
+
 I really hope you give [`embedded-text`] a try! If you have any questions, suggestions, issues,
 feature requests, or if you'd like to contribute, feel free to open an issue or a pull request on
 the GitHub repository!
 
 [`embedded-graphics`]: https://github.com/jamwaffles/embedded-graphics
 [`embedded-text`]: https://github.com/bugadani/embedded-text
-[docs.rs]: https://docs.rs/embedded-layout/
+[docs.rs]: https://docs.rs/embedded-text/

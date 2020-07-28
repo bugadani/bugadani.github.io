@@ -18,11 +18,11 @@ To install, add the following to your `Cargo.toml` dependencies:
 embedded-text = "0.0.3"
 ```
 
-For documentation, see [docs.rs].
+For documentation, see [docs.rs]
 
 I really hope you give [`embedded-text`] a try! If you have any questions, suggestions, issues,
 feature requests, or if you'd like to contribute, feel free to open an issue or a pull request on
 the GitHub repository!
 
 [`embedded-text`]: https://github.com/bugadani/embedded-text
-[docs.rs]: https://docs.rs/embedded-layout/
+[docs.rs]: https://docs.rs/embedded-text/
