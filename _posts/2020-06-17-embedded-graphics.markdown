@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Improving embedded-graphics' draw performance"
 date:   2020-06-17 08:25 +0200
 categories: embedded-graphics ssd1306 performance

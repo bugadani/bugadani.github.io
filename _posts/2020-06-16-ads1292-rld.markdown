@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "How to fix ADS129x RLD output being stuck at AVDD"
 date:   2020-06-16 10:05:44 +0200
 categories: ads1292 rld issue

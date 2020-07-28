@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Micro-optimization of the day: bit masks"
 date:   2020-07-28 17:53 +0200
 categories: rust optimization

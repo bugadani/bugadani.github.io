@@ -1,0 +1,25 @@
+---
+layout: default
+body_class: post-template
+---
+
+<article role="main" class="post">
+  <header>
+    <div class="post__title">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </header>
+
+  <div class="post__text" id="js-post-content">
+    {{ content }}
+
+    <p><time datetime="{{ page.date | date:'%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+    <p>
+      <a href="http://twitter.com/share?text={{ page.title | xml_encode }}&url={{ page.url | prepend: site.baseurl }}"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" id="btn_comment"
+        target="_blank">
+        <span aria-hidden="true" data-icon="C"></span> Tweet2me ↗
+      </a>
+    </p>
+  </div>
+</article>

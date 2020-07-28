@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Extending embedded-graphics with simple layout functions"
 date:   2020-06-23 09:19 +0200
 categories: embedded-graphics features

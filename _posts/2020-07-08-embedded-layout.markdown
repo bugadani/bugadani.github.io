@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Announcing embedded-layout 0.1.0"
 date:   2020-07-08 9:12 +0200
 categories: embedded-graphics embedded-layout

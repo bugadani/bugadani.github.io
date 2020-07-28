@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Announcing embedded-text 0.0.3"
 date:   2020-07-28 15:21 +0200
 categories: embedded-graphics embedded-text
