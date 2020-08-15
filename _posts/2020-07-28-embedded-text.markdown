@@ -2,7 +2,7 @@
 layout: post
 title:  "Announcing embedded-text 0.0.3"
 date:   2020-07-28 15:21 +0200
-categories: embedded-graphics embedded-text
+categories: rust embedded-graphics embedded-text
 ---
 
 A new test version of [`embedded-text`] is available for download. This version contains a few new

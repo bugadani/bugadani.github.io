@@ -2,7 +2,7 @@
 layout: post
 title:  "Announcing embedded-text 0.1.0"
 date:   2020-07-31 20:33 +0200
-categories: rust optimization
+categories: embedded-graphics embedded-text
 excerpt_separator: <!--more-->
 ---
 
