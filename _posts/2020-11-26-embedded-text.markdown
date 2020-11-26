@@ -27,7 +27,9 @@ You can now use ANSI escape sequences to style your text. ANSI sequences provide
 text style in line with the text itself. This is a more flexible, but perhaps a bit more involved
 method to style your text compared to specifying a static style using `TextBoxStyleBuilder`.
 For the list of supported sequences, please see the [documentation][ansi-docs].
-Check out the `colored_text` example for a demo.
+Check out the `colored_text` example for a demo, which renders the following image:
+
+![text styled with ANSI escape sequences](/assets/colored_text.png)
 
 ## Scrolling alignment
 
