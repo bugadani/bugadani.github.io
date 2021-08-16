@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Announcing embedded-text 0.5.0-beta.3"
-date:   2021-07-10 17:30 +0200
+date:   2021-08-08 17:30 +0200
 categories: rust embedded-graphics embedded-text
 excerpt_separator: <!--more-->
 ---
@@ -28,7 +28,7 @@ can be used at the same time.
 *Note*: Plugin support is currently experimental and unrefined. Expect breaking changes, or even
 complete removal in the future.
 
-For a complete list of changes (excluding some under the hood changes), see the [changelog],
+For a complete list of changes (excluding some under the hood changes), see the [changelog].
 
 To install, add the following to your `Cargo.toml` dependencies:
 
