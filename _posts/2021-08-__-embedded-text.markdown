@@ -16,18 +16,48 @@ usability changes and bugfixes. `0.5.0` is also the first stable release built o
 
 ## New features
 
- * plugins
- * vertical offsetting
- * paragraph spacing
- * configurable space rendering
+### Plugins
+
+The new embedded-text now support plugins! Plugins are an experimental feature to extend the 
+capabilities of the crate. To implement a plugin, users need to enable the `plugins` cargo feature.
+
+Note that imlementing a new plugin is experimental and the API may break without prior notice.
+
+The crate provides a small number of plugins that can be used without enabling the `plugins`
+feature.
+
+ * `Tail`
+ * `Ansi`
+
+### Vertical offsetting
+
+The vertical position of the text can now be modified using the `vertical_offset` text box option.
+
+### Paragraph spacing
+
+The vertical distance between paragraphs (sections of text separated by a newline `\n` character)
+can now be changed using the `paragrap_spacing` style option.
+
+### Configurable space rendering
+
+You can now force to render or hide (collapse) the leading or trailing spaces in lines.
 
 ## Usability changes
 
- * `TextBox` configuration options are no longer encoded in the type of the text box object.
- * constructors
+These changes enable users to use embedded-text in a more flexible or simple way.
+
+### `TextBox` configuration options are no longer encoded in the type of the text box object.
+
+### New constructor functions
+
+To enable simpler construction of objects and to bring the API closer to embedded-graphics, this
+release adds new constructors to `TextBox` and `TextBoxStyle`.
 
 ## Removed 
 
+This list is not exhaustive.
+
+ *  A substantial amount of the API (internal or not intended as public) has been hidden.
  * `TextBoxStyle` objects can no longer be constructed (it is now `#[non_exhaustive]`).
  * `Scrolling` vertical alignment.
 
