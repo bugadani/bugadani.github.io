@@ -10,7 +10,7 @@ A new stable version of [`embedded-text`] is available for download. `embedded-t
 excellent [`embedded-graphics`] library with a `TextBox` object that supports multiline text
 rendering with the common text alignment options, rich styling features and more!
 
-`0.5.0` is a major update over the previous (`0.4.x`) iteration including new features, major
+`0.5.0` is a major update over the previous (`0.4.x`) iteration including new features, significant
 usability changes and bugfixes. `0.5.0` is also the first stable release built on top of
 `embedded-graphics` version `0.7`.
 
@@ -27,26 +27,55 @@ The crate provides a small number of plugins that can be used without enabling t
 feature.
 
  * `Tail`
+
+    The `Tail` plugin can be used to keep the end of the text (the tail) in the displayed area.
+
+    TODO: image
+
  * `Ansi`
 
-### Vertical offsetting
+    Enables text styling using (some) [Ansi sequences].
 
-The vertical position of the text can now be modified using the `vertical_offset` text box option.
+    TODO: image
 
-### Paragraph spacing
+[Ansi sequences]: https://en.wikipedia.org/wiki/ANSI_escape_code
 
-The vertical distance between paragraphs (sections of text separated by a newline `\n` character)
-can now be changed using the `paragrap_spacing` style option.
+### Other, smaller features
 
-### Configurable space rendering
+ * Vertical text offsetting
 
-You can now force to render or hide (collapse) the leading or trailing spaces in lines.
+   The vertical position of the text can now be modified using the `vertical_offset` text box option.
+
+   TODO: image
+
+ * Paragraph spacing
+
+   The vertical distance between paragraphs (sections of text separated by a newline `\n` character)
+   can now be changed using the `paragrap_spacing` style option.
+
+   TODO: image
+
+ * Configurable space rendering
+
+   You can now force to render or hide (collapse) the leading or trailing spaces in lines. This
+   configuration does not change how the lines are measured and wrapped, it only affets what is
+   rendered.
+
+   TODO: image
 
 ## Usability changes
 
 These changes enable users to use embedded-text in a more flexible or simple way.
 
 ### `TextBox` configuration options are no longer encoded in the type of the text box object.
+
+Previously, style options like alignment were encoded in the type of the text box. This meant that
+storing the text box object in a variable (e.g. a struct field in an UI) was cumbersome and did not
+allow much flexibility.
+
+Starting with `0.5.0`, embedded-text uses non-zero sized values (e.g. enums) as configuration,
+removing the old myriad of type parameters, making embedded-text easier to use and simpler to
+configure.
 
 ### New constructor functions
 
@@ -60,6 +89,8 @@ This list is not exhaustive.
  *  A substantial amount of the API (internal or not intended as public) has been hidden.
  * `TextBoxStyle` objects can no longer be constructed (it is now `#[non_exhaustive]`).
  * `Scrolling` vertical alignment.
+ * Ansi sequence support has been removed from the base library and reimplemented as the `Ansi`
+   plugin.
 
 For a complete list of changes (excluding some under the hood changes), see the [changelog].
 
