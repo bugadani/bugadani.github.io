@@ -80,7 +80,16 @@ configure.
 ### New constructor functions
 
 To enable simpler construction of objects and to bring the API closer to embedded-graphics, this
-release adds new constructors to `TextBox` and `TextBoxStyle`.
+release adds new constructors to `TextBox` and `TextBoxStyle`. Use these functions if you only
+want to change a single property from the default style. These new constructors are:
+
+ * `TextBox::with_alignment` / `TextBoxStyle::with_alignment`
+ * `TextBox::with_vertical_alignment` / `TextBoxStyle::with_vertical_alignment`
+ * `TextBox::with_height_mode` / `TextBoxStyle::with_height_mode`
+ * `TextBox::with_line_height` / `TextBoxStyle::with_line_height`
+ * `TextBox::with_paragraph_spacing` / `TextBoxStyle::with_paragraph_spacing`
+ * `TextBox::with_tab_size` / `TextBoxStyle::with_tab_size`
+ * `TextBox::with_vertical_offset`
 
 ## Removed 
 
