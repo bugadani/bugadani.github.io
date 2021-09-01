@@ -95,7 +95,8 @@ want to change a single property from the default style. These new constructors 
 
 This list is not exhaustive.
 
- *  A substantial amount of the API (internal or not intended as public) has been hidden.
+ *  A substantial amount of the API (internal or not intended as public) has been hidden to reduce
+    clutter.
  * `TextBoxStyle` objects can no longer be constructed (it is now `#[non_exhaustive]`).
  * `Scrolling` vertical alignment.
  * Ansi sequence support has been removed from the base library and reimplemented as the `Ansi`
