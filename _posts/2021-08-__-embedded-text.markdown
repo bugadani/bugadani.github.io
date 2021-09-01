@@ -29,14 +29,37 @@ feature.
  * `Tail`
 
     The `Tail` plugin can be used to keep the end of the text (the tail) in the displayed area.
+    Example: in the left column, the text is top aligned. In the right column, the same text is
+    displayed top-aligned, but with the `Tail` plugin active.
 
-    TODO: image
+    ![Image showing the Tail plugin in action](/assets/0.5.0/tail.png)
+
+    ```rust
+    use embedded_text::{
+      plugin::tail::Tail, TextBox, ...
+    };
+
+    TextBox::new(...)
+      .add_plugin(Tail) // < where the magic happens
+      .draw(&mut display)?;
+    ```
 
  * `Ansi`
 
-    Enables text styling using (some) [Ansi sequences].
+    Enables text styling using (some) [Ansi sequences]. While this feature has been part of previous
+    versions, now you can add it to select `TextBox` instances instead of enabling globally.
 
-    TODO: image
+    ![Ansi sequence demo showcasing advanced styling](/assets/colored_text.png)
+
+    ```rust
+    use embedded_text::{
+      plugin::ansi::Ansi, TextBox, ...
+    };
+    
+    TextBox::new(...)
+      .add_plugin(Ansi::new()) // < where the magic happens
+      .draw(&mut display)?;
+    ```
 
 [Ansi sequences]: https://en.wikipedia.org/wiki/ANSI_escape_code
 
