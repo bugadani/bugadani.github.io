@@ -76,7 +76,19 @@ feature.
    The vertical distance between paragraphs (sections of text separated by a newline `\n` character)
    can now be changed using the `paragrap_spacing` style option.
 
-   TODO: image
+   ```rust
+   use embedded_text::style::TextBoxStyleBuilder;
+   ...
+   let textbox_style = TextBoxStyleBuilder::new()
+     ...
+     .paragraph_spacing(6)
+     .build();
+   ```
+
+   In the following example picture, the paragraph spacing of the left text box is 0, while the
+   right is 6.
+
+    ![Two columns of text with different paragraph spacing](/assets/0.5.0/paragraph_spacing.png)
 
  * Configurable space rendering
 
