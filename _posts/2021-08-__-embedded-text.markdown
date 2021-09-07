@@ -96,6 +96,9 @@ feature.
    configuration does not change how the lines are measured and wrapped, it only affets what is
    rendered.
 
+   Note that if a line is wrapped at a space (in case the space does not fit in the current line),
+   a single space is consumed and will not be displayed or carried over to the next line.
+
    TODO: image
 
 ## Usability changes
