@@ -73,33 +73,33 @@ feature.
 
  * Paragraph spacing
 
-   The vertical distance between paragraphs (sections of text separated by a newline `\n` character)
-   can now be changed using the `paragrap_spacing` style option.
+    The vertical distance between paragraphs (sections of text separated by a newline `\n` character)
+    can now be changed using the `paragrap_spacing` style option.
 
-   ```rust
-   use embedded_text::style::TextBoxStyleBuilder;
-   ...
-   let textbox_style = TextBoxStyleBuilder::new()
-     ...
-     .paragraph_spacing(6)
-     .build();
-   ```
+    ```rust
+    use embedded_text::style::TextBoxStyleBuilder;
+    ...
+    let textbox_style = TextBoxStyleBuilder::new()
+      ...
+      .paragraph_spacing(6)
+      .build();
+    ```
 
-   In the following example picture, the paragraph spacing of the left text box is 0, while the
-   right is 6.
+    In the following example picture, the paragraph spacing of the left text box is 0, while the
+    right is 6.
 
     ![Two columns of text with different paragraph spacing](/assets/0.5.0/paragraph_spacing.png)
 
  * Configurable space rendering
 
-   You can now force to render or hide (collapse) the leading or trailing spaces in lines. This
-   configuration does not change how the lines are measured and wrapped, it only affets what is
-   rendered.
+    You can now force to render or hide (collapse) the leading or trailing spaces in lines. This
+    configuration does not change how the lines are measured and wrapped, it only affets what is
+    rendered.
 
-   Note that if a line is wrapped at a space (in case the space does not fit in the current line),
-   a single space is consumed and will not be displayed or carried over to the next line.
+    Note that if a line is wrapped at a space (in case the space does not fit in the current line),
+    a single space is consumed and will not be displayed or carried over to the next line.
 
-   TODO: image
+    ![One column of text that renders leading spaces, and one column that renders trailing spaces](/assets/0.5.0/whitespace_control.png)
 
 ## Usability changes
 
