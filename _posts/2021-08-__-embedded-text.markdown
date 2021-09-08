@@ -67,9 +67,18 @@ feature.
 
  * Vertical text offsetting
 
-   The vertical position of the text can now be modified using the `vertical_offset` text box option.
+    The vertical position of the text within a text box can now be modified using the
+    `vertical_offset` text box option. Negative values move the text up, while positive values move
+    it down.
 
-   TODO: image
+    `vertical_offset` is a field of `TextBox`.
+
+    ```rust
+    use embedded_text::TextBox;
+    ...
+    let mut text_box = TextBox::new(...);
+    text_box.vertical_offset = 10; // move text down by 10 pixels
+    ```
 
  * Paragraph spacing
 
