@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Announcing embedded-text 0.5.0"
-date:   2021-08-?? ??:?? +0200
+date:   2021-09-08 18:15 +0200
 categories: rust embedded-graphics embedded-text
 excerpt_separator: <!--more-->
 ---
