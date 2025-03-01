@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 
 We have recently merged a series of exciting patches[^1] [^2] [^3] [^4] into [probe-rs], that
 implement server-client functionality using websockets and postcard-rpc. In this post, I'll try
-to explain the motivation behind the work, the the design, configuration and usage of this feature.
+to explain the motivation behind the work, the design, configuration and usage of this feature.
 
 ## Why?
 
@@ -151,7 +151,7 @@ at the [cross-compilation] guide!
 
 ## Configuration
 
-Before starting the server, you will need to do configure it. To do so, create a `.probe-rs.toml`
+Before starting the server, you will need to configure it. To do so, create a `.probe-rs.toml`
 (or YAML, or JSON, but I'll be using TOML in this article) file in your home folder on the server.
 Currently the only thing you can define is a list of users, but in the future we'll have more
 options. For each user you will need to assign a unique token. Clients will need to specify this
